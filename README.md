@@ -4,45 +4,6 @@
 
 Creé el **results-screen** que mantiene la misma arquitectura del proyecto game y backend, sin emitir eventos socket directamente desde el cliente (usa controladores/intermediarios como se solicitó).
 
-## Estructura del Proyecto
-
-```
-Parcial2Eco/
-├── game/                          # Cliente original del juego
-│   ├── app.js
-│   ├── index.html
-│   ├── styles.css
-│   └── screens/
-│       ├── homeScreen.js
-│       ├── lobbyScreen.js
-│       ├── gameGround.js          # ✅ Actualizado con puntuaciones
-│       └── gameOverScreen.js
-├── results-screen/                # ✅ NUEVO CLIENTE
-│   ├── app.js
-│   ├── index.html
-│   ├── styles.css
-│   ├── README.md
-│   └── screens/
-│       ├── leaderboard-real-time.js    # Vista 1: Tiempo real
-│       └── leaderboard-final-screen.js # Vista 2: Pantalla final
-├── server/                        # Backend actualizado
-│   ├── controllers/
-│   │   ├── game.controller.js     # ✅ Actualizado con lógica de puntuaciones
-│   │   ├── players.controller.js
-│   │   └── results.controller.js  # ✅ NUEVO controlador
-│   ├── routes/
-│   │   ├── game.router.js
-│   │   ├── players.router.js
-│   │   └── results.router.js       # ✅ NUEVAS rutas
-│   ├── db/
-│   │   └── players.db.js          # ✅ Actualizado con puntuaciones
-│   ├── services/
-│   │   └── socket.service.js
-│   └── utils/
-│       └── helpers.js
-└── index.js                       # ✅ Actualizado con nuevas rutas
-```
-
 ## Requisitos Funcionales Implementados
 
 ### 1. Results-Screen con Dos Vistas
